@@ -6,13 +6,15 @@ import Input from "../Input/Input"
 import ButtonStyled from "../Button/Button"
 import { ContainerSelect } from "../../pages/Home/style"
 
-function ModalEdit(
+function ModalEdit({
+	setOpenModal,
+	openModal,
 	setOpenModalEdit,
 	handleEdit,
 	techName,
 	handleDelete,
-	idTech
-) {
+	idTech,
+}) {
 	const { register, handleSubmit } = useForm()
 
 	return (

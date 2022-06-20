@@ -6,7 +6,12 @@ import Input from "../Input/Input"
 import ButtonStyled from "../Button/Button"
 import { ContainerSelect } from "../../pages/Home/style"
 
-function ModalCad({ setOpenModal, openModal, handleNewTechs }) {
+function ModalCad({
+	setOpenModal,
+	openModal,
+	handleNewTechs,
+	setOpenModalEdit,
+}) {
 	const { register, handleSubmit } = useForm()
 
 	return (
@@ -14,6 +19,7 @@ function ModalCad({ setOpenModal, openModal, handleNewTechs }) {
 			title="Cadastrar Tecnologia"
 			setOpenModal={setOpenModal}
 			openModal={openModal}
+			setOpenModalEdit={setOpenModalEdit}
 		>
 			<form onSubmit={handleSubmit(handleNewTechs)}>
 				<Input label="Nome" register={register} name="title" />

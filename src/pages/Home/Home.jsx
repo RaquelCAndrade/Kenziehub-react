@@ -187,11 +187,14 @@ function Home({ authorization, setAuthorization }) {
 					setOpenModal={setOpenModal}
 					openModal={openModal}
 					handleNewTechs={handleNewTechs}
+					setOpenModalEdit={setOpenModalEdit}
 				/>
 			)}
 
 			{openModalEdit && (
 				<ModalEdit
+					setOpenModal={setOpenModal}
+					openModal={openModal}
 					setOpenModalEdit={setOpenModalEdit}
 					handleEdit={handleEdit}
 					techName={techName}
